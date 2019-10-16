@@ -12,6 +12,7 @@ public class Variables : MonoBehaviour
     public string stringValue;
     public Vector3 vectorValue;
 
+
     //I didn't mention double or char because they are less common
 
     //Double is similar to float but with more precision (15 or 16 decimal points vs 6 or 7)
@@ -28,12 +29,13 @@ public class Variables : MonoBehaviour
     //It says "void" because it doesn't return anything
     void Update()
     {
-        Debug.Log("Integers are whole numbers, such as: " + integerValue + "\n");
-        Debug.Log("Floating point numbers contain decimal points, such as: " + floatValue + "\n");
-        Debug.Log("Booleans are true or false: " + isItTrue + "\n");
-        Debug.Log("Strings are letters, words and sentences: " + stringValue + "\n");
-        Debug.Log("Vectors are special objects which contain 2, 3, or 4 floats: " + vectorValue + "\n");
-        Debug.Log("Functions can do things like add numbers together: " + Add(floatValue,secondFloatValue) + "\n");
+        print("Integers are whole numbers, such as: " + integerValue + "\n");
+        print("Floating point numbers contain decimal points, such as: " + floatValue + "\n");
+        print("Booleans are true or false: " + isItTrue + "\n");
+        print("Strings are letters, words and sentences: " + stringValue + "\n");
+        print("Vectors are special objects which contain 2, 3, or 4 floats: " + vectorValue + "\n");
+        float addedUp = Add(1.0f, 2.0f);
+        print("Functions can do things like add numbers together: " + addedUp + "\n");
 
     }
 

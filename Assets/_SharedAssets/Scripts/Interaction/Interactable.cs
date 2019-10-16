@@ -79,31 +79,31 @@ public class Interactable : MonoBehaviour
 
     public virtual void HandleEnter(){
         if (debug)
-            Debug.Log("enter");
+            Debug.Log(this.gameObject.name + " enter");
     }
 
     public virtual void HandleHover(){
         if (debug)
-            Debug.Log("hover");
+            Debug.Log(this.gameObject.name + " hover");
         if (hoverCounter < hoverTime)
             hoverCounter += Time.deltaTime;
     }
 
     public virtual void HandleExit(){
         if (debug)
-            Debug.Log("exit");
+            Debug.Log(this.gameObject.name + " exit");
     }
 
     public virtual void HandleWaiting(){
         if (hoverCounter > 0)
             hoverCounter -= Time.deltaTime;
         if (debug)
-            Debug.Log("waiting");
+            Debug.Log(this.gameObject.name + " waiting");
     }
 
     public virtual void HandleTrigger()
     {
         if (debug)
-            Debug.Log("trigger");
+            Debug.Log(this.gameObject.name + " trigger");
     }
 }

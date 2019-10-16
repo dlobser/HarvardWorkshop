@@ -24,7 +24,7 @@ public class Interactable_Reticle : Interactable
 
         thisReticle.transform.position = Camera.main.transform.position;
         thisReticle.transform.LookAt(this.transform.position);
-        thisReticle.transform.GetChild(0).GetComponent<MeshRenderer>().material.SetFloat("_Percent",1-( hoverCounter / hoverTime)); 
+        thisReticle.transform.GetChild(0).GetComponent<MeshRenderer>().material.SetFloat("_Percent",( hoverCounter / hoverTime)); 
 	}
 
 	public override void HandleWaiting(){
@@ -33,7 +33,7 @@ public class Interactable_Reticle : Interactable
         {
             if (hoverCounter > 0)
             {
-                thisReticle.transform.GetChild(0).GetComponent<MeshRenderer>().material.SetFloat("_Percent", 1 - (hoverCounter / hoverTime));
+                thisReticle.transform.GetChild(0).GetComponent<MeshRenderer>().material.SetFloat("_Percent",(hoverCounter / hoverTime));
             }
             else
                 Destroy(thisReticle);

@@ -4,10 +4,10 @@ public class Loops : MonoBehaviour
 {
     void Start()
     {
-        WhileLoop();
+        //WhileLoop();
         ForLoop();
-        ForLoop2D();
-        ForEachLoop();
+        //ForLoop2D();
+        //ForEachLoop();
     }
 
     void WhileLoop()
@@ -15,8 +15,9 @@ public class Loops : MonoBehaviour
         int i = 0;
         while (i < 10)
         {
+            i = i+1;
             print("While: " + i);
-            i++;
+
         }
     }
 
@@ -25,6 +26,7 @@ public class Loops : MonoBehaviour
         {
             print("For Loop: " + i);
         }
+
     }
 
     void ForLoop2D()
