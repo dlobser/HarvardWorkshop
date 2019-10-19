@@ -17,7 +17,7 @@ using UnityEngine;
 
 public class ThingManager : MonoBehaviour
 {
-    
+
     /* Define a public variable for your instantiatable 'Thing' (public GameObject or public Thing)
      * Define an amount variable to limit the number of things which will be created
      * Define variables to define the initial placement of the things
@@ -27,6 +27,12 @@ public class ThingManager : MonoBehaviour
      * Define a 'List' variable to keep track of the objects (optional)
      */
 
+    public Thing thing;
+    public int amount;
+    public float howBigIsTheCircle;
+    private float counter;
+    public float timeToInstantiateNewThing = .2f;
+
     void Start()
     {
         // Create your new list here (optional)
@@ -34,6 +40,14 @@ public class ThingManager : MonoBehaviour
 
     void Update()
     {
+        counter += Time.deltaTime;
+        if(counter > timeToInstantiateNewThing){
+            counter = 0;
+            Vector2 circle = Random.insideUnitCircle;
+            circle = circle.normalized*howBigIsTheCircle;
+            Vector3 position = new Vector3(circle.x, circle.y, 0);
+            Instantiate(thing,position,Quaternion.identity);
+        }
         /* use your timer variable to count up until it is larger than your frequency variable (Time.deltaTime)
          * set your timer to 0
          * if amountOfThings is less amount, instantiate a new thing

@@ -13,7 +13,6 @@ public class Simple_Interactable_Color : Simple_Interactable
 
 	public override void OnRaycastHit(){
         raycastHit = true;
-
     }
 
 	private void Update()
@@ -22,6 +21,7 @@ public class Simple_Interactable_Color : Simple_Interactable
             GetComponent<MeshRenderer>().material.color = color;
         else
             GetComponent<MeshRenderer>().material.color = init;
+        
         raycastHit = false;
 	}
 }

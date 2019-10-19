@@ -22,7 +22,7 @@ public class EventInteractable : MonoBehaviour, IPointerDownHandler, IPointerCli
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject.name);
+        Debug.Log("Clicked: " + eventData);//eventData.pointerCurrentRaycast.gameObject.name);
     }
 
     public void OnPointerDown(PointerEventData eventData)
